@@ -10,7 +10,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 response = session.post(
     url='https://scanner.tradingview.com/crypto/scan',
-    data={"filter":[{"left":"Recommend.MA","operation":"nempty"},{"left":"sector","operation":"nempty"},{"left":"market_cap_calc","operation":"nempty"},{"left":"name","operation":"match","right":"BTC$"}],"symbols":{"query":{"types":[]}},"columns":["sector","change","Perf.W","Perf.1M","Perf.3M","Perf.6M","Perf.YTD","Perf.Y","Volatility.D"],"sort":{"sortBy":"Recommend.MA","sortOrder":"asc"},"options":{"lang":"en"},"range":[0,50]}
+    data="{\"filter\":[{\"left\":\"change\",\"operation\":\"nempty\"}],\"symbols\":{\"query\":{\"types\":[]}},\"columns\":[\"name\",\"Recommend.Other\",\"ADX\",\"AO\",\"ATR\",\"CCI20\",\"MACD.macd\",\"MACD.signal\",\"Mom\",\"RSI\",\"Stoch.K\",\"Stoch.D\",\"description\",\"name\",\"subtype\",\"ADX\",\"ADX+DI\",\"ADX-DI\",\"ADX+DI[1]\",\"ADX-DI[1]\",\"AO\",\"AO[1]\",\"CCI20\",\"CCI20[1]\",\"MACD.macd\",\"MACD.signal\",\"Mom\",\"Mom[1]\",\"RSI\",\"RSI[1]\",\"Stoch.K\",\"Stoch.D\",\"Stoch.K[1]\",\"Stoch.D[1]\"],\"sort\":{\"sortBy\":\"change\",\"sortOrder\":\"desc\"},\"options\":{\"lang\":\"en\"},\"range\":[0,150]}",
     headers= headers
 )
 
